@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     font-family: 'Inter', sans-serif;
@@ -11,12 +15,17 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #FFFFFF;
-    /* font-family: 'Merriweather', serif; */
 }
 
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
+}
+
+input, textarea {
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 .inner {
@@ -114,6 +123,15 @@ h1, h2, h3, p {
 }
 /* TODO: иправить этот margin 
 и переделать языки (структура html) и css*/
+.header__nav-item a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header__nav-item a:visited {
+    color: #FFFFFF;
+}
+
 .lang-item {
     margin-left: 10px;
 }
@@ -275,8 +293,9 @@ h1, h2, h3, p {
 }
 
 .price__item {
-    padding-top: 43px;
+    padding: 43px 0 40px 0;
     width: 450px;
+    border: 3px solid #BDAE82;
     text-align: center;
 }
 
@@ -313,11 +332,61 @@ h1, h2, h3, p {
 
 /* ---- contacts start ----*/
 .contacts__inner {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     height: 700px;
+    padding: 60px 20px 195px;
     background-image: url(./img/contacts_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.contacts__content {
+    width: 450px;
+}
+
+.contacts__title {
+    margin-bottom: 40px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: #BDAE82;
+}
+
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contacts__form input {
+    padding: 10px 20px;
+    border: 2px solid rgba(189, 174, 130, 1);
+    outline:none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contacts__form input::placeholder {
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
+
+.contacts__form  textarea {
+    height: 100px;
+    margin-bottom: 7px;
+    padding: 5px 20px;
+    resize: none;
+    outline:none;
+    border: 2px solid rgba(189, 174, 130, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contacts__form textarea::placeholder {
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
 /* ---- contacts end ----*/
