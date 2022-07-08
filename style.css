@@ -1,0 +1,268 @@
+@import url(_normolize.css);
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    /* font-family: 'Merriweather', serif; */
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section__title {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: #BDAE82;
+}
+
+.section__title:before,
+.section__title:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: 50%;
+  height: 2px;
+  vertical-align: middle;
+  background: #BDAE82;
+}
+
+.section__title:before {
+  left: -10px;
+  margin-left: -50%;
+}
+
+.section__title:after {
+  left: 10px;
+  margin-right: -50%;
+}
+
+.btn {
+    width: 220px;
+    height: 55px;
+    padding: 0;
+    border: 2px solid #BDAE82;
+    background-color: transparent;
+    line-height: 40px;
+    color: #BDAE82;
+}
+
+.btn-colored {
+    background-color: #BDAE82;
+    color: #000000;
+}
+
+/* ---- header start ---- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav-item {
+    margin-right: 30px;
+}
+
+.header__nav-item:last-child {
+    margin-right: 0;
+}
+/* TODO: иправить этот margin 
+и переделать языки (структура html) и css*/
+.lang-item {
+    margin-left: 10px;
+}
+
+/* ---- header end ---- */
+
+/* ---- hero start ---- */
+.hero__inner {
+    min-height: 910px;
+    padding: 250px 0 0 80px;
+    background-image: url(img/hero_bg.jpg);
+    background-size: cover;
+}
+
+.hero__info {
+    max-width: 500px;
+    padding-right: 30px;
+}
+
+.hero__title {
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 120px;
+}
+
+.hero__description {
+    margin-bottom: 25px;
+    line-height: 40px;
+}
+
+/* ---- hero end ---- */
+
+/* ---- skills start ---- */
+.skills__inner {
+    padding: 0 40px;
+    padding-top: 100px;
+}
+
+.skills__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills__item {
+    text-align: center;
+}
+
+.skills__item-logo {
+    margin-bottom: 45px;
+}
+
+.skills__item-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.skills__item-description {
+    max-width: 280px;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* ---- skills end ---- */
+
+/* ---- portfolio start ---- */
+.portfolio__inner {
+    padding-top: 110px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    max-width: 895px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.portfolio__items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 450px;
+    gap: 25px;
+}
+
+.portfolio__item {
+    width: 450px;
+    height: 560px;
+}
+
+.item_1 {
+    background-image: url(/img/autumn_1.jpg);
+    background-size: cover;
+}
+.item_2 {
+    background-image: url(/img/autumn_2.jpg);
+    background-size: cover;
+}
+.item_3 {
+    background-image: url(/img/autumn_3.jpg);
+    background-size: cover;
+}
+.item_4 {
+    background-image: url(/img/autumn_4.jpg);
+    background-size: cover;
+}
+.item_5 {
+    background-image: url(/img/autumn_5.jpg);
+    background-size: cover;
+}
+.item_6 {
+    background-image: url(/img/autumn_6.jpg);
+    background-size: cover;
+}
+/* ---- portfolio end ---- */
+
+/* ---- video start ---- */
+.video__inner {
+    padding-top: 100px;
+}
+
+.video__content {
+    position: relative;
+    width: 100%;
+    min-height: 705px;
+    background-image: url(./img/video_player.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.btn-play {
+    position: absolute;
+    top: calc(50% - 65px);
+    left: calc(50% - 65px);
+    width: 130px;
+    height: 130px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+/* ---- video end ---- */
+
+/* ---- price start ---- */
+.price__inner {
+    padding-top: 100px;
+}
+/* ---- price end ---- */
