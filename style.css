@@ -264,5 +264,60 @@ h1, h2, h3, p {
 /* ---- price start ---- */
 .price__inner {
     padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.price__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.price__item {
+    padding-top: 43px;
+    width: 450px;
+    text-align: center;
+}
+
+.price__title {
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 56px;
+}
+
+.cost {
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    color: #BDAE82;
+}
+
+.price__description {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.price__description-item {
+    font-size: 18px;
+    line-height: 36px;
 }
 /* ---- price end ---- */
+
+/* ---- contacts start ----*/
+.contacts__inner {
+    width: 100%;
+    height: 700px;
+    background-image: url(./img/contacts_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ---- contacts end ----*/
